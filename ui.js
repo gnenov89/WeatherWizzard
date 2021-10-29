@@ -12,7 +12,7 @@ class UI {
     }
 
     paint(weather) {
-        this.location.textContent = weather.current;
+        this.location.textContent = weather.weather.dispa
         this.desc.textContent = weather.weather;
 
     }
