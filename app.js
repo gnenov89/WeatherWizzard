@@ -7,8 +7,21 @@ const ui = new UI;
 // Get weather on DOM load
 document.addEventListener('DOMContentLoaded', getWeather);
 
-// Test to change location
-// weather.changeLocation('25.7617', '80.1918');
+// Change Location event 
+document.getElementById('w-change-btn').addEventListener('click', (e) => {
+    const city = document.getElementById('city').value;
+    const state = document.getElementById('state').value;
+
+    // Test to change location
+    weather.changeLocation('Miami', 'FL');
+
+    getWeather();
+
+    $('#locModal').modal('hide');
+
+}); 
+
+
 
 function getWeather(){
   weather.getWeather()
